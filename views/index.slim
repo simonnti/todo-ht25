@@ -1,1 +1,17 @@
+h1 ATT GÖRA
 
+form action="/task" method="post"
+ input type="text" name="new_task" placeholder="add new task"
+ input type="text" name="description" placeholder="description"
+ input type="submit" value="ahh dis wan"
+
+- @dataskibidi.each do |task|
+    h3 
+        a href="/#{task["id"]}/edit" #{task["name"]}
+    
+    p Description: #{task["description"]} pcs
+    form action="/tasks/#{task["id"]}/delete" method="post"
+        input type="submit" value="DONE!!!! 🤯"/
+
+    
+    hr
