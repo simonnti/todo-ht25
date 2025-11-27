@@ -1,1 +1,14 @@
+h1 TASKS
+hr
 
+form action="/" method="get"
+    input name="q" placeholder="Search fo task" type="text"
+    input type="submit" value="Search my boy"
+
+- @datadih.each do |todo|
+    h3 #{todo["id"]}. #{todo["name"]}
+    
+    p Description: 
+    p #{todo["description"]}
+    p Klar? #{todo["state"]}
+    hr
