@@ -5,10 +5,21 @@ form action="/" method="get"
     input name="q" placeholder="Search fo task" type="text"
     input type="submit" value="Search my boy"
 
+form action="/" method="post"
+    input type="text" name="new_task" placeholder="NEW TASK"
+    input type="text" name="description" placeholder="descriptjon"
+    input type="submit" value="ahh dis wan"
+
 - @datadih.each do |todo|
-    h3 #{todo["id"]}. #{todo["name"]}
+    h3 
+    
+        a href="/#{todo["id"]}/edit" #{todo["name"]}
     
     p Description: 
     p #{todo["description"]}
     p Klar? #{todo["state"]}
+
+    form action="/#{todo["id"]}/delete" method="post"
+        input type="submit" value="dalayt e 🤯"/
+
     hr
